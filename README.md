@@ -127,7 +127,7 @@ The function accepts the following arguments:
 
 -   If `N` equals `1`, the function returns early without modifying the input, as a single data point is its own Fourier transform.
 
--   This transform is unnormalized as a call to this function followed by a call performing a [backward transform][@stdlib/fft/base/fftpack/rfftb] will multiply the input array by `N`.
+-   This transform is unnormalized as a call to this function followed by a call performing a [backward transform][@stdlib/fft/base/fftpack/generic/rfftb] will multiply the input array by `N`.
 
 </section>
 
@@ -254,7 +254,7 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [@stdlib/fft/base/fftpack/generic/rffti]: https://github.com/stdlib-js/fft-base-fftpack-generic-rffti
 
-[@stdlib/fft/base/fftpack/rfftb]: https://github.com/stdlib-js/fft-base-fftpack-rfftb
+[@stdlib/fft/base/fftpack/generic/rfftb]: https://github.com/stdlib-js/fft-base-fftpack-generic-rfftb
 
 </section>
 
