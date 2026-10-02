@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,17 +16,27 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { Collection } from '@stdlib/types/array';
 
 /**
-* Compute the forward discrete Fourier transform (DFT) of a real-valued sequence.
+* Computes the forward discrete Fourier transform (DFT) of a real-valued sequence.
 *
-* @module @stdlib/fft-base-fftpack-generic-rfftf
+* @param N - length of the sequence to transform
+* @param r - input array
+* @param strideR - stride length for `r`
+* @param offsetR - starting index for `r`
+* @param w - workspace array containing pre-computed values
+* @param strideW - stride length for `w`
+* @param offsetW - starting index for `w`
+* @returns input array
 *
 * @example
 * var Float64Array = require( '@stdlib/array-float64' );
 * var rffti = require( '@stdlib/fft-base-fftpack-generic-rffti' );
-* var rfftf = require( '@stdlib/fft-base-fftpack-generic-rfftf' );
 *
 * var N = 4;
 *
@@ -38,12 +48,9 @@
 * rfftf( N, r, 1, 0, w, 1, 0 );
 * // r => <Float64Array>[ 10.0, -2.0, 2.0, -2.0 ]
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function rfftf<T extends Collection<number>>( N: number, r: T, strideR: number, offsetR: number, w: Collection<number>, strideW: number, offsetW: number ): T;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = rfftf;
